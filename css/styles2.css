@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/*Paleta de colores*/
+/*COLORES UTILIZADOS*/
+.color1 {
+  color: white; }
+
+.color2 {
+  color: #062783; }
+
+.colorBlanco {
+  color: white; }
+
+/*1er fuente de letra para los titulos*/
+@font-face {
+  font-family: "Monea Alegante";
+  src: url(../Fuentes/Monea\Alegante.otf); }
+
+/*2da fuente de letra para el cuerpo de la pag*/
+@font-face {
+  font-family: "Bar Booth at Matts";
+  src: url(../Fuentes/Bar\Booth\at\Matts.ttf); }
+
+@font-face {
+  font-family: "creamDemo";
+  src: url(../Fuentes/cream-DEMO.ttf); }
+
+/*UTILIZO DIF CLASES DE NEGRITAS YA QUE UNA APLICA A LA PAGINA DE INICIO DONDE EL TAMAÑO QUEDA MEJOR UN POCO MAS GRANDE*/
+.negrita {
+  font-weight: bold;
+  font-size: 2.8rem; }
+  .negrita .negrita2 {
+    font-weight: bold;
+    font-size: 2.3rem; }
+
+.fuenteMediana {
+  font-size: 1.875rem; }
+  .fuenteMediana .fuenteMedianaGrande {
+    font-size: 1.875rem; }
+
+/*MAPS*/
+/*EN ESTE MAPA LE DOY EL DISPLAY A MIS IMGS Y A MI FRAME*/
+#ImgsIndex {
+  display: flex; }
+
+#ImgsHab {
+  display: flex; }
+
+#FramesIndex {
+  display: flex; }
+
+/*FLEX DIRECTION A MIS IMGS Y A MI FRAME*/
+#ImgsIndex {
+  flex-direction: column; }
+
+#ImgsHab {
+  flex-direction: column; }
+
+#FramesIndex {
+  flex-direction: column; }
+
+/*EXTEND*/
+ul, .enLinea .transparente {
+  list-style: square; }
+
+.enLinea .transparente {
+  display: inline-block;
+  padding: 1.2%;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border-color: transparent; }
+
+/*MIXIN*/
+#ImgsHab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem; }
+
+#framesIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+/* viñetas cuadradas*/
+ul, .enLinea .transparente {
+  list-style: square; }
+  ul a, .enLinea .transparente a {
+    text-decoration: none; }
+    ul a .enLinea, .enLinea .transparente a .enLinea {
+      display: inline-block;
+      padding: 1.2%;
+      font-size: 1.25rem; }
+      ul a .enLinea .transparente, .enLinea .transparente a .enLinea .transparente {
+        background-color: transparent;
+        border-color: transparent; }
+
+.listaNav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none; }
+  .listaNav li {
+    font-size: 1.375rem; }
+
+/*modif de titulos de los html*/
+h1 {
+  color: #bce233;
+  font-size: 6.563rem;
+  font-family: "Monea Alegante";
+  text-align: center;
+  font-weight: bold;
+  margin: 6.125rem 0.625rem 1.875rem;
+  animation-duration: 2.5s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite; }
+  h1 .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px; }
+    h1 .titulo .h2Contacto {
+      padding-bottom: 1.25rem; }
+
+.carousel {
+  cursor: pointer; }
+
+button {
+  padding: 0.313rem; }
+  button .separacion {
+    padding-bottom: 2rem; }
+
+/*imagen de fondo*/
+body {
+  background-image: url(../img/CssImagenFondo/ImgFondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+
+footer {
+  font-size: 1.25rem;
+  color: white;
+  text-align: center;
+  font-family: "Monea Alegante";
+  font-size: 2.188rem;
+  text-align: center;
+  padding-top: 1.5rem; }
+
+#imgsIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem; }
+
+#ImgsHab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem; }
+
+#framesIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem; }
+
+#equipaciones h2 {
+  padding-bottom: 1.875rem; }
+
+img:hover {
+  transform: scale(1.2);
+  transition: 0.9s; }
+
+.listaNav li {
+  height: 0.625rem;
+  transition: ease-out 2s;
+  transition: height .3s; }
+  .listaNav li :hover {
+    background-color: #426fa8;
+    height: 1.25rem; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*MEDIA QUERYS*/
+@media (min-width: 768px) {
+  #imgsIndex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; }
+  #imgsHab {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; }
+  #framesIndex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.5rem; }
+  #serviciosImg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; } }
+
+@media (min-width: 1024px) {
+  #imgsIndex {
+    grid-template-columns: repeat(2, 1fr); }
+  #imgsHab {
+    grid-template-columns: repeat(2, 1fr); } }

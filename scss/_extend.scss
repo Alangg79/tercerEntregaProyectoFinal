@@ -1,0 +1,14 @@
+/*EXTEND*/
+
+ul {
+    list-style: square;
+}
+
+.enLinea .transparente {
+    @extend ul;
+    display: inline-block;          
+    padding: 1.2%;
+    font-size: 1.25rem; 
+    background-color: transparent;
+    border-color: transparent;
+}

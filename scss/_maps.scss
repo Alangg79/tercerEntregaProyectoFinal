@@ -1,0 +1,25 @@
+/*MAPS*/
+
+/*EN ESTE MAPA LE DOY EL DISPLAY A MIS IMGS Y A MI FRAME*/
+
+$mapImgFrame: (ImgsIndex:flex, ImgsHab:flex, FramesIndex:flex);
+
+@each $displayMap, $display in $mapImgFrame {
+
+    ##{$displayMap} {
+        display: $display;
+    }
+    
+}
+
+/*FLEX DIRECTION A MIS IMGS Y A MI FRAME*/
+
+$mapFlexImgFrame: (ImgsIndex:column, ImgsHab:column, FramesIndex:column);
+
+@each $flexMap, $flex in $mapFlexImgFrame {
+
+    ##{$flexMap} {
+        flex-direction: $flex;
+    }
+    
+}
